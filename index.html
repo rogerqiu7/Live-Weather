@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- text font style-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+    <!-- number font style-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet"/>
+    <!-- search button icon-->
+    <script src="https://kit.fontawesome.com/a538d6fa29.js" crossorigin="anonymous"></script>
+    <!-- icon -->
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/thermometer_1f321-fe0f.png">
+    <title>Live Weather</title>
+  </head>
+
+  <body>
+    <div id="main-container">
+
+      <!-- Header -->
+      <header>
+          <h1 class="title"> 🌡️ Live Weather </h1>
+      </header>
+
+      <!-- search city form-->
+      <div class="search">
+        <form>
+          <div class="form-group">
+
+            <!-- search city button-->
+            <button class="submit-btn">
+                <!-- search icon button-->
+              <i class="fas fa-search"></i>
+            </button>
+
+            <!-- search input bar-->
+            <input type="text" placeholder="Search city" />
+            <br />
+            <span class="error-msg">No matching location found!</span>
+            
+          </div>
+        </form>
+      </div>
+      
+      <!-- city weather info display-->
+      <div class="main-weather-display info">
+        <div class="general-info">
+          <p class="condition">CONDITIONS</p>
+          <h1 class="location">CITY, REGION</h1>
+          <span class="degrees">##</span>
+        </div>
+        <div class="weather-details info">
+          <p class="feels-like">FEELS LIKE: #</p>
+          <p class="wind-mph">WIND: # MPH</p>
+          <p class="humidity">HUMIDITY: #</p>
+        </div>
+      </div>
+    </div>
+
+        <!-- footer-->
+    <footer class="footer">
+        Page created using HTML, CSS & Javascript, source code available <a href="https://github.com/rogerqiu7/Painting-Palette"> here on my GitHub </a>
+    </footer>
+
+    <!-- JS-->
+    <script src="script.js"></script>
+  </body>
+</html>
