@@ -25,13 +25,15 @@ async function getWeatherData(location) {
   } else {
     error.style.display = 'none';
     const weatherData = await response.json();
+    // set newdata as processdata function taking json converted response
     const newData = processData(weatherData);
+    //perform displaydata on newdata
     displayData(newData);
     reset();
   }
 }
 
-// throw error msg function: ???
+// throw error msg function
 function throwErrorMsg() {
   error.style.display = 'block';
   if (error.classList.contains('fade-in')) {
@@ -46,7 +48,8 @@ function throwErrorMsg() {
 }
 
 // processdata function takes raw weatherdata from API
-// my data is data read from Weatherdata
+// my data is data read from Weatherdata json 
+// read condition, feels like, current temp, wind, humidity and location name
 function processData(weatherData) {
   const myData = {
     condition: weatherData.current.condition.text,
